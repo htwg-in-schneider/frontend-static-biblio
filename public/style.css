@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background: linear-gradient(to right, #2e7d6b, #1f4f46);
+}
+
+/* HERO */
+.hero {
+     height: 100vh;
+    background: url("images/Hintergrund.jpg") no-repeat center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* NAVBAR */
+.navbar {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 95%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 30px;
+    border-radius: 30px;
+    
+   
+    gap: 80px;
+    z-index: 2;
+}
+
+/* LINKS */
+.navbar a {
+    font-family: 'Playfair Display';
+    text-decoration: none;
+    color: #333;
+    font-weight: 650;
+}
+
+.navbar a:hover {
+    color: #011b08;  
+}
+
+/* HERO TEXT */
+.hero-content {
+    /*position: relative;*/
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display';
+    font-size: 90px;
+    letter-spacing: 4px;
+}
+
+.hero-content p {
+    font-family: 'Playfair Display';
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+
+.hero-content button {
+    font-family: 'Playfair Display';
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+
+    transition: all 0.3s ease; /* 👈 wichtig */
+}
+
+/* HOVER */
+.hero-content button:hover {
+    background: #011b08;
+    color: white;
+    transform: scale(1.05);
+    /*box-shadow: 0 10px 25px rgba(46,125,107,0.4);*/
+}
+
+/* BOOKS */
+.books {
+      padding: 50px;
+    background: #f8f8f8;
+    font-family: 'Playfair Display';
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    font-family: 'Playfair Display';
+}
+
+.book {
+     width: 150px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center;
+    font-family: 'Playfair Display';
+}
+
+/* SOCIAL */
+.social {
+    padding: 50px;
+    background: #eaeaea;
+    font-family: 'Playfair Display';
+}
