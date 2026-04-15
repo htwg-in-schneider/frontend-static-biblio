@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+
 </head>
 <body>
-    <header class="hero">
+    <header id="top" class="hero">
 
         <nav class="navbar">
-            <a href="#">Home</a> <!-- '#' Platzhalter -->
-            <a href="#">Entdecken</a>
-            <a href="#">Freunde</a>
-            <a href="#">Profil</a>
+            <div class="navbar-inner">
+                <a href="#top">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <div class="spacer"></div>
+
+                <i class="fa-regular fa-user"></i>
+            </div> 
         </nav>
 
         <div class="hero-content">
-           <h1>Biblio</h1> 
-           <p>Endecke gemeinsam Bücher</p>
-           <button>Jetzt starten</button>
+            <img src="pictures\transparent-logo.png" class="logo" alt="Biblio Logo">
+           <p>Entdecke gemeinsam Bücher</p>
+           <button>Start now</button>
         </div>
        
         
@@ -29,15 +42,19 @@
 
     <!-- Books -->
      <section class="books">
+        <p class="infotext">Tauche ein in die Welt der Bücher und vergleiche dich mit deinen Freunden - du kannst Buchclubs beitreten, an Challenges teilnehmen und dich mit deinen Freunden verbinden</p>
         <h2>Beliebte Bücher</h2>
         <div class="book-container">
             <div class="book">
-                <img src="C:\Users\marle\Downloads\A little life.jpg">
-                <p>A little Life</p>
+                <img src="pictures\A Little Life.jpg">
+                <p class="title">A Little Life</p>
+                <p class="author">Hanya Yanagihara</p>
+                
             </div>
             <div class="book">
-                <img src="C:\Users\marle\Downloads\Anna Karenina.jpg">
-                <p>Anna Karenina</p>
+                <img src="pictures\anna_karenina.jpeg">
+                <p class="title">Anna Karenina</p>
+                <p class="author">Leo Tolstoi</p>
             </div>
         </div>
      </section>
@@ -57,3 +74,20 @@
 
 </body>
 </html>
+
+<script>
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+        // runter scrollen → verstecken
+        navbar.classList.add("hidden");
+    } else {
+        // hoch scrollen → zeigen
+        navbar.classList.remove("hidden");
+    }
+
+    lastScrollY = window.scrollY;
+});
+</script>
